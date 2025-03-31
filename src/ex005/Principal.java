@@ -6,6 +6,8 @@ public class Principal {
         Televisao tv = new Televisao();
         Controle controle = new Controle(tv);
 
+        controle.ligar();
+
         controle.aumentarCanal();
         controle.aumentarCanal();
         controle.diminuirCanal();
@@ -22,6 +24,11 @@ public class Principal {
         controle.escolherCanal(10);
 
         controle.consultarVolumeCanal();
+
+        controle.desligar();
+
+        controle.consultarVolumeCanal();
+
     }
 
 

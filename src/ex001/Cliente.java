@@ -1,9 +1,6 @@
 package ex001;
 
-import java.text.SimpleDateFormat;
 import java.time.Year;
-import java.util.Date;
-import java.util.Objects;
 
 public class Cliente {
 

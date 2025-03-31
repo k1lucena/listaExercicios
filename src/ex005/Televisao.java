@@ -1,7 +1,5 @@
 package ex005;
 
-import java.util.Objects;
-
 public class Televisao {
 
     private int volume;

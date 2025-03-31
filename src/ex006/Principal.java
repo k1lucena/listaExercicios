@@ -5,6 +5,7 @@ public class Principal {
     public static void main(String[] args) {
 
         Agenda agenda = new Agenda();
+        agenda.imprimirAgenda();
 
         agenda.armazenaPessoa("Kauan", 20, 1.80f);
         agenda.armazenaPessoa("Maria", 25, 1.65f);

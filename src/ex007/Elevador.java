@@ -3,22 +3,22 @@ package ex007;
 public class Elevador {
 
     private int andarAtual;
-    private int TOTAL_ANDARES;
-    private int CAPACIDADE;
+    private int totalAndares;
+    private int capacidade;
     private int quantidadePessoas;
 
     public Elevador() {
     }
 
     public void inicializar(int capacidade, int totalAndares){
-        this.CAPACIDADE = capacidade;
-        this.TOTAL_ANDARES = totalAndares;
+        this.capacidade = capacidade;
+        this.totalAndares = totalAndares;
         this.andarAtual = 0;
         this.quantidadePessoas = 0;
     }
 
     public void entrar(int quantidadePessoas){
-        if (quantidadePessoas <= (this.TOTAL_ANDARES - this.quantidadePessoas)){
+        if (quantidadePessoas <= (this.totalAndares - this.quantidadePessoas)){
             this.quantidadePessoas = quantidadePessoas;
         } else {
             System.out.println("Capacidade máxima atingida!");
@@ -34,7 +34,7 @@ public class Elevador {
     }
 
     public void subir(){
-        if (this.andarAtual < this.TOTAL_ANDARES){
+        if (this.andarAtual < this.totalAndares){
             this.andarAtual++;
         } else {
             System.out.println("Você está no ultimo andar!");
@@ -49,6 +49,15 @@ public class Elevador {
         }
     }
 
+    public void imprimeStatus() {
+        System.out.println(
+                        "Andar atual: " + andarAtual + "\n" +
+                        "Total de andares: " + totalAndares + "\n" +
+                        "Capacidade: " + capacidade + " pessoas" + "\n" +
+                        "Pessoas presentes: " + quantidadePessoas + "\n"
+        );
+    }
+
     public void andarAtual(){
         System.out.println(this.andarAtual);
     }
@@ -61,20 +70,20 @@ public class Elevador {
         this.andarAtual = andarAtual;
     }
 
-    public int getTOTAL_ANDARES() {
-        return TOTAL_ANDARES;
+    public int gettotalAndares() {
+        return totalAndares;
     }
 
-    public void setTOTAL_ANDARES(int TOTAL_ANDARES) {
-        this.TOTAL_ANDARES = TOTAL_ANDARES;
+    public void settotalAndares(int totalAndares) {
+        this.totalAndares = totalAndares;
     }
 
-    public int getCAPACIDADE() {
-        return CAPACIDADE;
+    public int getcapacidade() {
+        return capacidade;
     }
 
-    public void setCAPACIDADE(int CAPACIDADE) {
-        this.CAPACIDADE = CAPACIDADE;
+    public void setcapacidade(int capacidade) {
+        this.capacidade = capacidade;
     }
 
     public int getQuantidadePessoas() {

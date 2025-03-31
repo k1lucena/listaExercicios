@@ -1,7 +1,5 @@
 package ex004.filmes;
 
-import java.util.Objects;
-
 public class Filme {
 
     private String titulo;

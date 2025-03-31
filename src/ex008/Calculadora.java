@@ -15,8 +15,13 @@ public class Calculadora {
         this.resultado = numero1 + numero2;
     }
 
-    public void dividir(){
-        this.resultado = this.numero1 / this.numero2;
+    public void dividir() {
+        if (this.numero2 != 0) {
+            this.resultado = this.numero1 / this.numero2;
+        } else {
+            System.out.println("Divisão por zero!");
+            this.resultado = 0;
+        }
     }
 
     public double multiplicar(double numero1, double numero2){

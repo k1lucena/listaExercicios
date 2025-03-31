@@ -13,18 +13,18 @@ public class Locacao {
     }
 
     public void alugarFilme(int dias){
-        if(this.filme.categoria.equalsIgnoreCase("infantil")){
-            this.preco = 4.0 + 2.0;
-        } else if (this.filme.categoria.equalsIgnoreCase("lançamento")){
-            this.preco = 4.0 + 3.0;
-        } else if (this.filme.categoria.equalsIgnoreCase("promoção")){
-            this.preco = 4.0 - 2.0;
-        }
-
 
         if (this.filme.getAlugado().equals(false) && dias != 0){
             this.filme.setAlugado(true);
             double precoFinal = this.preco * dias;
+
+            if (this.filme.categoria.equalsIgnoreCase("infantil")){
+                this.preco = 4.0 + 2.0;
+            } else if (this.filme.categoria.equalsIgnoreCase("lançamento")){
+                this.preco = 4.0 + 3.0;
+            } else if (this.filme.categoria.equalsIgnoreCase("promoção")){
+                this.preco = 4.0 - 2.0;
+            }
 
             System.out.println(
                     "===== Recibo =====\n" +

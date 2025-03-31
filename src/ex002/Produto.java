@@ -19,21 +19,20 @@ public class Produto {
         if (quantidade > estoque){
             return 0.0;
         }
+
         double valorTotal;
 
         if(quantidade <= 10) {
-            estoque -= quantidade;
             valorTotal = this.preco * quantidade;
         } else if (quantidade <= 20) {
-            estoque -= quantidade;
             valorTotal = (this.preco * quantidade) * 0.9;
         } else if (quantidade <= 50) {
-            estoque -= quantidade;
             valorTotal = (this.preco * quantidade) * 0.8;
         } else {
-            estoque -= quantidade;
             valorTotal = (this.preco * quantidade) * 0.75;
         }
+
+        estoque -= quantidade;
         return valorTotal;
     }
     public String getNome() {

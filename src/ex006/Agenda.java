@@ -32,8 +32,8 @@ public class Agenda {
                 pessoas[i] = pessoas[i + 1];
         }
 
-        pessoas[this.quantidade-1] = null;
         this.quantidade -= 1;
+        pessoas[this.quantidade] = null;
     }
 
     public void imprimirAgendaStream(){
@@ -41,9 +41,13 @@ public class Agenda {
     }
 
     public void imprimirAgenda(){
-        for(Pessoa p: pessoas){
-            if(p != null) {
-                System.out.print(p);
+        if (this.quantidade == 0){
+            System.out.println("A agenda está vazia!");
+        } else {
+            for (Pessoa p : pessoas) {
+                if (p != null) {
+                    System.out.print(p);
+                }
             }
         }
     }

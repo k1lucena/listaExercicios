@@ -6,20 +6,28 @@ public class Principal {
 
         Elevador elevador = new Elevador();
 
-        elevador.inicializar(15, 8);
+        elevador.inicializar(8, 5);
+        elevador.imprimeStatus();
 
-        elevador.entrar(8);
+
+        for (int i = 0; i < 3; i++) {
+            elevador.entrar(1);
+        }
+
+        elevador.subir();
+        elevador.subir();
+        elevador.desce();
+        elevador.subir();
+        elevador.subir();
+        elevador.subir();
+        elevador.andarAtual();
 
         elevador.sair();
+        elevador.sair();
+        elevador.sair();
 
-        elevador.subir();
-        elevador.subir();
-        elevador.desce();
-        elevador.subir();
-        elevador.subir();
-        elevador.desce();
+        elevador.imprimeStatus();
 
-        elevador.andarAtual();
 
     }
 
